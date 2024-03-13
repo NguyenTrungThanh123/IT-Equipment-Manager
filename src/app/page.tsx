@@ -1,4 +1,3 @@
-'use client'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from "./page.module.scss"
 import Sidebar from "./components/sidebar/page";
