@@ -10,7 +10,7 @@ const TwoFloor = () => {
         <>
             TwoFloor Page
             <button onClick={() => setShowModal(!showModal)}>{showModal ? "Hide modal" : "Show modal"}</button>
-            {showModal && <Modal />}
+            {/* {showModal && <Modal />} */}
         </>
     )
 }
