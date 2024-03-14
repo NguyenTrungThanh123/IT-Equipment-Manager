@@ -1,7 +1,7 @@
 'use client'
 import Link from "next/link"
 import Modal from "../../../components/modal/page"
-import Button from 'react-bootstrap/Button';
+import Button from '../../../components/Button/page';
 import { useState, useEffect } from "react"
 
 
@@ -18,7 +18,6 @@ const GroundFloor = () => {
     // }, [showModal,firstRender]);
     const handleClick = (namePosition: string) => {
         setShowModal(true)
-
     }
     const handleCloseModal = () => {
         setShowModal(false); // Ẩn modal khi đóng
@@ -26,17 +25,13 @@ const GroundFloor = () => {
 
     return (
         <>
-            <div>
-                GroundFloor Page
-            </div>
             <div className="d-flex flex-wrap">
                 {
-                    namePostions.map(namePosition => {
+                    namePostions.map((namePosition,index) => {
                         return (
-                            <>
-                                <Button key={namePosition} className="mx-2" variant="outline-success" onClick={() => handleClick(namePosition)}>{namePosition}</Button>
-                            </>
-
+                            <div key={index}>
+                                <Button onClick={() => handleClick(namePosition)}>{namePosition}</Button>
+                            </div>
                         )
                     })
 
@@ -44,9 +39,6 @@ const GroundFloor = () => {
                 }
             </div>
             <Modal showModal={showModal} onHide={handleCloseModal} />
-            {console.log(showModal)}
-
-
         </>
     )
 }

@@ -14,7 +14,7 @@ const Sidebar = () => {
     const [showDashboard, setShowDashboard] = useState<boolean>(false);
     const [showProducts, setShowProducts] = useState<boolean>(false);
     return (
-        <div className="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100 bg-dark">
+        <div className="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
             <Nav className="flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu" style={{position: 'fixed'}}>
                 <Nav.Link onClick={() => handleDropdownItemClick('/')} className="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-decoration-none">
                     <span className="fs-5 d-none d-sm-inline">Menu</span>
@@ -60,7 +60,6 @@ const Sidebar = () => {
                     </ul>
                 </Nav.Item>
             </Nav>
-            <hr />
         </div>
     );
 };

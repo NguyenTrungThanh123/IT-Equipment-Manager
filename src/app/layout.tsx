@@ -23,10 +23,10 @@ export default function RootLayout({
       <body className={inter.className}>
         <Container fluid>
           <Row>
-            <Col lg={2} md={3} sm={3} xs={3}>
+            <Col lg={2} md={3} sm={3} xs={3} className="bg-dark">
               <Sidebar />
             </Col>
-            <Col lg={10} md={9} sm={9} xs={9}>
+            <Col lg={10} md={9} sm={9} xs={9} className="border border-2 border-danger">
               <div>{children}</div>
             </Col>
           </Row>
